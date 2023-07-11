@@ -8,11 +8,50 @@
 </head>
 
 <body>
-  <h1>Loops in JS</h1>
+  <h1>Working with Sequence, Selection and Loop</h1>
  
  <script>
 
-/* for( var i = 4; i <= 16; i++ ) {
+  var firstName = "Julia";
+  var lastName = "Kr";
+  var adjective = "Nice";
+  var name = prompt("What's Your Name?");
+  console.log(`I think that ${firstName} ${lastName} looks ${adjective}`);
+
+
+/*
+  var myString = "I am really hungry for some";
+  console.log(myString);
+  var myUpperString = myString.toUpperCase();
+  console.log(myUpperString);
+
+  var reallyLocation = myString.search('really');
+  var specialWord = myString.substr(reallyLocation, 6);
+  specialWord = specialWord.toUpperCase();
+  var newString = myString.replace('really', specialWord);
+  console.log(newString);
+
+   var foods = ['cheese', 'pie', 'candy', 'sweet'];
+
+  /*console.log(myString, foods[1 , 3]); 
+  */
+
+ /*
+  for(var i=0; i<foods.length; i++){
+
+    var remainder = i % 2; 
+
+    if(remainder == 0){
+      var foodUpper = foods[i].toUpperCase();
+      console.log(`${myString} ${foodUpper}`);
+    }
+    else {
+      console.log(`${myString} ${foods[i]}`);
+    }
+  }
+
+
+/* for( var i = 4; i <= 16; i++ ) 
   console.log(i);
 }
 */
@@ -37,6 +76,7 @@ for( var eachletter of myString ){
 }
 */
 
+/*
 var incrementor = 0;
 var text = "";
 
@@ -45,6 +85,9 @@ while( incrementor < 10){
   incrementor++;
 }
 console.log(text);
+*/
+
+
  
 
 </script>
