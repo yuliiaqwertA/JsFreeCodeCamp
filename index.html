@@ -8,117 +8,87 @@
 </head>
 
 <body>
-  <h1>Working with Sequence, Selection and Loop</h1>
+  <h1>Functions in JavaScript</h1>
  
  <script>
 
-  /*var firstName = "Julia";
-  var lastName = "Kr";
-  var adjective = "Nice";
-  */
-
-
-
   
-  var number = prompt("Enter Phone Number", " ");
-  
-  if (number > 10) {
-    console.log("error");
-  } else if( number < 9) {
-    console.log("notOK");
+  function doStuff(){
+    var myString = "Here is a string of text";
+    var upperString = myString.toUpperCase();
+    console.log(myString);
+    console.log(upperString);
   }
-   else {
-    console.log("ok");
-  }
+ doStuff();
 
+  function checkNum(){
+    var userNum = prompt("Enter a whole number", "");
 
-  
+  if(userNum < 10){
+    console.log("you entered number less than 10");
+    for( var i=0; i<10; i++){
+      console.log(`index.htmlhere is a ${i}`);
+    }
 
-
-  /* if(userNum < 10 ) {
-    console.log("you less than 10");
   } else if( userNum > 9) {
-    console.log("you big");
+      console.log("you entered a big number");
   } else {
-    console.log("ERROR");
+    console.log("ERROR: you didn't enter a number");
+
   }
-*/
-
-
-
-  
-
-
-/*
-  var myString = "I am really hungry for some";
-  console.log(myString);
-  var myUpperString = myString.toUpperCase();
-  console.log(myUpperString);
-
-  var reallyLocation = myString.search('really');
-  var specialWord = myString.substr(reallyLocation, 6);
-  specialWord = specialWord.toUpperCase();
-  var newString = myString.replace('really', specialWord);
-  console.log(newString);
-
-   var foods = ['cheese', 'pie', 'candy', 'sweet'];
-
-  /*console.log(myString, foods[1 , 3]); 
-  */
-
- /*
-  for(var i=0; i<foods.length; i++){
-
-    var remainder = i % 2; 
-
-    if(remainder == 0){
-      var foodUpper = foods[i].toUpperCase();
-      console.log(`${myString} ${foodUpper}`);
-    }
-    else {
-      console.log(`${myString} ${foods[i]}`);
-    }
-  }
-
-
-/* for( var i = 4; i <= 16; i++ ) 
-  console.log(i);
 }
-*/
+   // checkNum();
 
-/*
-var colors = ['red', 'blue', 'yellow', 'green', 'orange', 'purple'];
-
-for( var eachColors of colors){
-  console.log( eachColors);
+function upperMessage(message) {
+  var upperMessage = message.toUpperCase();
+  console.log(upperMessage);
 }
-*/
+// upperMessage('here is a message');
 
-/* 
-var myString = "Here is my string of text!";
-
-for( var i = 0; i<myString.length; i++){
-  console.log(myString[i]);
+function addNums(num1, num2, num3, num4) {
+  var sum = num1 + num2 * num3 / num4;
+  console.log(sum);
 }
 
-for( var eachletter of myString ){
-  console.log( eachletter);
+// addNums(4, 40, 2, 2);
+
+function returnSum(num1, num2) {
+  var sum = num1 + num2;
+  return sum;
 }
-*/
+ // console.log( returnSum(3, 5) );
 
-/*
-var incrementor = 0;
-var text = "";
+  // console.log( Math.random() );
 
-while( incrementor < 10){
-  text += `The incrementor has gone ${incrementor} \n`;
-  incrementor++;
+var foods = ["cheese", "chicken", "grapes", "sweets"];
+
+function randomInt( min, max ){
+
+   
+   /* var numOfValues = max - min +1;
+    // console.log(numOfValues);
+   var randomNum = Math.random();
+   var randomVal = randomNum * numOfValues; 
+   // console.log(randomVal);
+   var roundedRandomVal = Math.floor(randomVal);
+    // console.log(roundedRandomVal);
+   var finalNum = min + roundedRandomVal;
+    // console.log( finalNum);
+    return finalNum;
+    */
+
+   return Math.floor( (max - min + 1) * Math.random()) + min;
 }
-console.log(text);
-*/
+  console.log( foods[ randomInt(0, 3) ]);
 
 
- 
+var greeting = function(){
+  console.log("hello from the function");
+}
+
+greeting();
+
 
 </script>
+</body>
 </html>
