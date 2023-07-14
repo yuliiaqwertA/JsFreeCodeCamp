@@ -8,43 +8,21 @@
 </head>
 
 <body>
-  <h1>Challenge 10-16</h1>
+  <h1>DOM Examples</h1>
+  <div id="special">
+    <p>Here is a paregraph</p>
+    <p>Here is enother paragraph</p>
+    <p>Here is one more paragraph</p>
+  </div>
  
  <script>
-
   
-  var yourName = prompt('provide your name', '');
-  var food = ['sweets', 'cake', 'candy', 'banana'];
-
-   function hello(name) {
-
-    var greeting;
-
-    if(name == null || name == ''){
-      console.log("you didn't give me a name");
-    }
-    else{
-      console.log(`Hello ${name}, and welcome!`);
-    }
-
-    return greeting;
-   }
-
-   function randomInt( min, max ){
-    return Math.floor( (max - min + 1) * Math.random() ) + min;
-   }
-
-
-    function hospitality(name, gift) {
-
-      var randomGift = gift[ randomInt(0, gift.length-1) ];
-        console.log(`${name}, would you like some ${randomGift}?`);
-      }
-
-    
-
-   console.log( hello(yourName) );
-   hospitality(yourName, food);
+  var myDiv = document.getElementById('special');
+  myDiv.innerHTML = "<p>Here is my new paragraph</p>";
+  
+  
+  
+  
  
 
 </script>
