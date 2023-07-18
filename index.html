@@ -5,20 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Testing Selections and Booleans</title>
+  
 </head>
-
 <body>
   <h1>DOM Examples</h1>
-  <div id="special">
-    <p>Here is a paregraph</p>
-    <p>Here is enother paragraph</p>
-    <p>Here is one more paragraph</p>
+  <div>
+    <p>This is a first paragraph on this page.</p>
   </div>
- 
+
  <script>
-  
-  var myDiv = document.getElementById('special');
-  myDiv.innerHTML = "<p>Here is my new paragraph</p>";
+
+  var myTag = document.createElement('p');
+  var myText = document.createTextNode("Here is a new paragraph.");
+  myTag.appendChild(myText);
+  var myDiv = document.querySelector('div');
+  myDiv.appendChild(myTag);
   
   
   
