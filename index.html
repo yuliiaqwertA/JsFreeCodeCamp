@@ -8,18 +8,35 @@
   
 </head>
 <body>
-  <h1>DOM Examples</h1>
+  <h1>DOM CHALLENGES</h1>
+
   <div>
-    <p>This is a first paragraph on this page.</p>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+    <h2 class="why">Why do we use it?
+      Why do we use it?
+      Why do we use it?</h2>
+    <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
   </div>
 
  <script>
 
-  var myTag = document.createElement('p');
-  var myText = document.createTextNode("Here is a new paragraph.");
-  myTag.appendChild(myText);
-  var myDiv = document.querySelector('div');
-  myDiv.appendChild(myTag);
+  /*document.getElementById("copyright").style.color = "green";*/
+
+  var allText = document.getElementsByTagName('p');
+  for ( var eachP of allText){
+    eachP.style.color = "green";
+    }  
+
+    var mainText = document.querySelector('h1');
+    mainText.style.color = "red";
+
+    
+    var textWhy = document.getElementsByTagName('h2');
+    textWhy.style.color = "red";
+
+
+    
+
   
   
   
